@@ -1,1 +1,15 @@
-<p>album works!</p>
+<h1>{{album.name}}</h1>
+<h2>{{album.artists.name}}</h2>
+<h2> {{album.release_date}} </h2>
+<img src="{{ album.images[1].url }}">
+
+<ul>
+	<li *ngFor="let track of album.tracks.items">
+		<p>
+			<a [routerLink]="['/tracks', track.id]">
+				{{ track.name }}
+			</a>
+		</p>
+	</li>
+</ul>
+

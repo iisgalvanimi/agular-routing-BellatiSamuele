@@ -1,1 +1,6 @@
-<p>artist works!</p>
+<h1>{{ artist.name }}</h1>
+
+<img src="{{ artist.images[1].url }}">
+<h3> Followers: {{artist.followers.total}} </h3>
+<h3> Generi: {{artist.genres}} </h3>
+<p><a href (click)="back()">Back</a></p>
