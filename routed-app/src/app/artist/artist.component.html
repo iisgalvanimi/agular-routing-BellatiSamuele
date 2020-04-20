@@ -3,4 +3,16 @@
 <img src="{{ artist.images[1].url }}">
 <h3> Followers: {{artist.followers.total}} </h3>
 <h3> Generi: {{artist.genres}} </h3>
+<h2>Album</h2>
+	<ul>
+		<li *ngFor="let album of album.items">
+			<h4>
+				<a [routerLink]="['/albums', album.id]">
+					{{ album.name }}
+				</a>
+			</h4>
+		</li>
+	</ul>
+
 <p><a href (click)="back()">Back</a></p>
+

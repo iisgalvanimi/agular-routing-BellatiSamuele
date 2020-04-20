@@ -16,6 +16,7 @@ export class ArtistComponent  implements OnInit {
   routeObs: Observable<ParamMap>;
   spotifyServiceObs: Observable<Object>;
   artist: any; //Qui salverò l'artista selezionato
+  album: any;
 
   //Usiamo la dependency injection per farci mandare i moduli del routing e dello
   //SpotifyService
@@ -40,6 +41,9 @@ export class ArtistComponent  implements OnInit {
     //spotifyServiceObs va dichiarato
     this.spotifyServiceObs = this.service.getArtist(artistId) ;
     this.spotifyServiceObs.subscribe((data)=>this.artist = data)
+
+    this.spotifyServiceObs = this.service.getArtistsAlbum(artistId) ;
+    this.spotifyServiceObs.subscribe((data)=>this.album = data)
   }
 
  back() : void
