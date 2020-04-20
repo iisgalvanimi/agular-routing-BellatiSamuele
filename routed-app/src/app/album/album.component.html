@@ -3,9 +3,8 @@
 </a>
 <h1>{{album.name}}</h1>
 <h2> {{album.release_date}} </h2>
-<a [routerLink]="['/artists', album.artists[0].id]">
-	<img src="{{ album.images[0].url }}">
-</a>
+<img src="{{ album.images[0].url }}">
+
 
 <h2>Tracks</h2>
 	<ul>
